@@ -1,6 +1,6 @@
 
-# 4 队列 QUeue
-## 4.1 队列的定义级运算
+# 4 队列 Queue
+## 4.1 队列的定义及运算
 * 是插入操作限定在表的尾部而其他操作限定在表的头部进行的线性表
 * 当队列中没有数据元素是成为空队列Empty Queue
 * 队列的操作是先进先出or 后进后出 （First In First Out  / Last In Last Out ）
@@ -93,13 +93,14 @@ public class CSeqQueue<T>:IQueue<T>{
 Node<T> q = new Node<T>(item);
 if(rear == null)
 {
-  rear = q;
+  front = rear = q;
 }
 else
 {
   rear.Next = q;
   rear = q;
 }
+num++;
 ``` 
 * 出队操作：Out()
 ```cs
